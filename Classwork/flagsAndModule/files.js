@@ -12,3 +12,4 @@ fs.readFile("data.txt", {flag:"r" }, (err, data)=>{
 
 
 //hello just for commit i am very tired and sleepy sry sir i will do better next time i promise <3
+// what do you call a agarbati mom ????
