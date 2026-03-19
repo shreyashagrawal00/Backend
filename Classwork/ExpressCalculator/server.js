@@ -2,22 +2,21 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
 
-app.get("/sum",(req,res)=>{
+app.post("/sum",(req,res)=>{
   
-  const a =parseInt(req.query.a);
-  const b =parseInt(req.query.b);
+const { a, b } = req.body;
 
-  res.send(a+b);
+  res.send (parseFloat(a) + parseFloat(b));
   
 })
 
-app.get("/sub",(req,res)=>{
+app.post("/sub",(req,res)=>{
   
-  const a =parseInt(req.query.a);
-  const b =parseInt(req.query.b);
+  const { a, b } = req.body;
 
-  res.send(a-b);
+  res.send( parseFloat(a) - parseFloat(b));
   
 })
 
@@ -28,7 +27,7 @@ app.get("/mul",(req,res)=>{
 
   res.send(a*b);
   
-})
+})  
 
 app.get("/div",(req,res)=>{
   
